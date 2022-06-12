@@ -30,6 +30,7 @@ export const handler: Handlers<""> = {
   // deno-lint-ignore require-await
   async GET(req, context){
     console.log(req)
+    console.log(context)
     return context.render("");
   }
 }
