@@ -26,11 +26,12 @@ export default function Home() {
   );
 }
 
-export const handler: Handlers<""> = {
+export const handler: Handlers<null> = {
   // deno-lint-ignore require-await
-  async GET(req, context){
-    console.log(req)
-    console.log(context)
-    return context.render("");
-  }
-}
+  async GET(req, context) {
+    console.log(
+      `GET: ${(context.remoteAddr as Deno.NetAddr).hostname} connected to ${req.url}`,
+    );
+    return context.render(null);
+  },
+};

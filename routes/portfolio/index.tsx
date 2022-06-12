@@ -55,7 +55,11 @@ const Content = ({ props }: { props: Project[] }) => {
 
 export const handler: Handlers<Project[]> = {
   // deno-lint-ignore require-await
-  async GET(_, context) {
+  async GET(req, context) {
+    console.log(
+      `GET: ${(context.remoteAddr as Deno.NetAddr).hostname} connected to ${req.url}`,
+    );
+
     const projects: Project[] = [
       {
         "id": "riscv",

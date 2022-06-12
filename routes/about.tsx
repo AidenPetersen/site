@@ -3,6 +3,7 @@
 import { Fragment, h } from "$fresh/runtime.ts";
 import Nav from "../components/Nav.tsx";
 import Meta from "../components/Meta.tsx";
+import { Handlers } from "$fresh/server.ts";
 
 export default function About() {
   return (
@@ -54,3 +55,13 @@ export default function About() {
     </>
   );
 }
+
+export const handler: Handlers<null> = {
+  // deno-lint-ignore require-await
+  async GET(req, context) {
+    console.log(
+      `GET: ${(context.remoteAddr as Deno.NetAddr).hostname} connected to ${req.url}`,
+    );
+    return context.render(null);
+  },
+};

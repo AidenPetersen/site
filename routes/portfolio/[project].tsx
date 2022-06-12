@@ -36,7 +36,11 @@ const Contents = (props: { page: Data }) => {
 };
 
 export const handler: Handlers<Data> = {
-  async GET(_, context) {
+  async GET(req, context) {
+    console.log(
+      `GET: ${(context.remoteAddr as Deno.NetAddr).hostname} connected to ${req.url}`,
+    );
+
     try {
       const markdown = await Deno.readTextFile(
         `${Deno.cwd()}/static/projects/${context.params.project}.md`,
