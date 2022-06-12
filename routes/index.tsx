@@ -1,6 +1,7 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { Fragment, h } from "$fresh/runtime.ts";
+import { Handlers } from "$fresh/server.ts";
 import Nav from "../components/Nav.tsx";
 import Meta from "../components/Meta.tsx";
 
@@ -23,4 +24,12 @@ export default function Home() {
       </p>
     </>
   );
+}
+
+export const handler: Handlers<""> = {
+  // deno-lint-ignore require-await
+  async GET(req, context){
+    console.log(req)
+    return context.render("");
+  }
 }
