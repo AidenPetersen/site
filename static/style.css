@@ -1,0 +1,139 @@
+html,
+body {
+  background: rgb(0, 0, 0);
+  color: rgb(212, 212, 212);
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  max-width: 72rem;
+  margin: auto;
+  padding-bottom: 10vmin;
+  padding-top: 10px;
+  padding-left: 5vmin;
+  padding-right: 5vmin;
+}
+
+main {
+  margin: 2em 1em;
+}
+
+/* h1 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -0.2em;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5,
+h6 {
+  font-size: 18px;
+}
+
+strong {
+  font-weight: 800;
+}
+
+/*
+Navbar stuff
+*/
+
+nav {
+  display: inline-block;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+nav li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+
+nav a {
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(160, 160, 160);
+  font-size: 16px;
+}
+
+a:hover {
+  color: rgb(212, 212, 212);
+}
+
+a.active {
+  color: rgb(194, 194, 194);
+}
+
+a.active:hover {
+  color: rgb(212, 212, 212);
+}
+
+a.name {
+  background: linear-gradient(to right, #ffffff, #b4b4b4, #6e6e6e, #9c9c9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;}
+
+@keyframes rainbow_animation {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

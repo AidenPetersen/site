@@ -1,0 +1,194 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+\usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.25in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\myresumeSubSubheading}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} {\small #2} & \textit{\small #3} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\vspace{2pt}\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Aiden Petersen} \\ \vspace{10pt}
+    \small (319) 930-8230 $|$ \href{mailto:x@x.com}{\underline{AidenPetersen@protonmail.com}} $|$ 
+    \href{https://linkedin.com/in/...}{\underline{ www.linkedin.com/in/aiden-l-petersen}} $|$
+    \href{https://github.com/...}{\underline{github.com/AidenPetersen}}
+\end{center}
+
+%-----------OBJECTIVE-----------
+
+    
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Iowa State University}{Ames, IA}
+      {Bachelor of Science, Computer Engineering (GPA: $3.95/4.0$)}{Aug. 2020 -- May 2024}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Software Development Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{June 2021 -- Present}
+      {Iowa State Web Development Services}{Ames, IA}
+      \resumeItemListStart
+        \resumeItem{Developed the back and front-end of a site to host a photography competition using Laravel and Vue.js alongside MySQL for the database}
+        \resumeItem{Implemented additional features to local Laravel libraries such as expanding form generation capabilities and creating additional utility functions}
+        \resumeItem{Learned the fundamentals of team software development using tools like git and Jira}
+      \resumeItemListEnd
+
+    \resumeSubheading
+            {International Collegiate Programming Contest Team}{Dec. 2020 -- Present}
+            {Iowa State University}{Ames, IA}
+            \resumeItemListStart
+            \resumeItem{Work in teams of 3 to solve difficult problems in a short period of time}
+            \resumeItem{Apply important computer science concepts such as algorithmic complexity and dynamic programming}
+        \resumeItemListEnd
+        \resumeSubheading
+        {Freshman Honors Research Project}{Jan. 2021 -- June 2021}
+        {Iowa State University}{Ames, IA}
+        \resumeItemListStart
+            \resumeItem {Developed a multi-class classifier using least squares}
+            \resumeItem{Gained experience using python with numpy and the MNIST data set}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+      
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+      {CprE 288: Embedded Systems}{June 2021 -- Present}
+      {Roomba Navigation}{Ames, IA}
+      \resumeItemListStart
+        \resumeItem{Developed a GUI using python's Tkinter to control and monitor the movements of the Roomba}
+        \resumeItem{Created libraries for various components, such as an IR and PING sensor}
+        \resumeItem{Wrote a project proposal to clearly communicate the problem we were trying to solve.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+     \myresumeSubSubheading{Languages:}{Java, Python, C/C++, Haskell, Elixir, SQL, PHP, JavaScript, TypeScript}{} \\
+     \myresumeSubSubheading{Platforms and Frameworks:}{Django, Laravel, JUnit, Windows, Linux}{} \\
+     \myresumeSubSubheading{Development Tools:}{Git, Github, Bitbucket, Jira, Confluence, Vim, Bash }{} \\
+     \myresumeSubSubheading{Other Software:}{Latex, MySQL, PostgreSQL, Microsoft Office Suite}{} \\
+    }
+ \end{itemize}
+ 
+%-----------LEADERSHIP & INVOLVEMENT-----------
+
+\section{Leadership \& Involvement}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+    \myresumeSubSubheading{IEEE-HKN,}{Member}{Apr. 2021 -- Present} \\
+    \myresumeSubSubheading{Swim Club,}{Member}{Aug. 2020 -- Present}
+
+    }
+ \end{itemize}
+
+\end{document}
